@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { Modal, Table, Button, Badge } from "react-bootstrap";
+import { thumbImgProps } from "../../../utils/imageProps";
 import {
   FaTimes,
   FaLeaf,
@@ -232,6 +233,7 @@ const TaxonomyCompareModal = ({
                       >
                         <img
                           src={imgUrl}
+                          {...thumbImgProps}
                           alt={item.scientific_name}
                           style={{
                             width: "100%",

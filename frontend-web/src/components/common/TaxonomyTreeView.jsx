@@ -201,6 +201,7 @@ import {
   FaProjectDiagram,
 } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import { thumbImgProps } from "../../utils/imageProps";
 
 const TaxonomyTreeView = ({
   treeData,
@@ -311,6 +312,7 @@ const TaxonomyTreeView = ({
           {/* Hình ảnh đại diện tí hon của Cấp Phân Vị */}
           <img
             src={imgUrl}
+            {...thumbImgProps}
             alt="cover"
             className="rounded-circle object-fit-cover shadow-sm me-2 border cursor-zoom"
             style={{ width: "32px", height: "32px" }}
@@ -517,9 +519,8 @@ const TaxonomyTreeView = ({
                                                                                 •
                                                                               </span>
                                                                               <img
-                                                                                src={
-                                                                                  varImg
-                                                                                }
+                                                                                src={varImg}
+                                                                                {...thumbImgProps}
                                                                                 alt="var thumb"
                                                                                 className="rounded object-fit-cover shadow-sm me-2 border"
                                                                                 style={{

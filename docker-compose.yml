@@ -53,7 +53,12 @@ services:
   #   env_file:
   #     - ./envs/.env.productionBackendAI
   #   depends_on:
-  #     - backend
+  #     postgres:
+  #       condition: service_started
+  #     rabbitmq:
+  #       condition: service_healthy
+  #     backend:
+  #       condition: service_started
 
   postgres:
     image: pgvector/pgvector:pg16

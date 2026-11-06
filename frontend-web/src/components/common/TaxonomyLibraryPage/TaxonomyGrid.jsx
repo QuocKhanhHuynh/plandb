@@ -2,6 +2,7 @@
 import React from "react";
 import { Row, Col, Card, Badge, Button, Spinner } from "react-bootstrap";
 import { FaCheck, FaEye, FaImages, FaFingerprint } from "react-icons/fa";
+import { thumbImgProps } from "../../../utils/imageProps";
 
 const TaxonomyGrid = ({
   data,
@@ -85,6 +86,7 @@ const TaxonomyGrid = ({
               >
                 <Card.Img
                   src={imgUrl}
+                  {...thumbImgProps}
                   className="h-100 w-100 transition-all hover-zoom"
                   style={{ objectFit: "cover" }}
                   alt={plant.scientific_name}

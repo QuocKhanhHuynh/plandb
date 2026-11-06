@@ -5,6 +5,7 @@ import "swiper/css/navigation";
 import { Navigation, Autoplay } from "swiper/modules";
 import { useNavigate } from "react-router-dom";
 import { FaArrowRight, FaEye, FaImages } from "react-icons/fa";
+import { thumbImgProps } from "../../../utils/imageProps";
 import "./TaxonomyCarousel.css"; // Nhớ import file CSS mới
 
 export default function TaxonomyCarousel({
@@ -76,6 +77,7 @@ export default function TaxonomyCarousel({
                 >
                   <img
                     src={imageUrl}
+                    {...thumbImgProps}
                     alt={item.common_name}
                     className="carousel-image"
                   />

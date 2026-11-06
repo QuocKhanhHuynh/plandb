@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Badge, Modal } from "react-bootstrap";
+import { thumbImgProps } from "../../utils/imageProps";
 import {
   FaChevronRight,
   FaChevronDown,
@@ -212,6 +213,7 @@ const TaxonomyTreeModal = ({
                                                 {/* THUMBNAIL HÌNH ẢNH */}
                                                 <img
                                                   src={imgUrl}
+                                                  {...thumbImgProps}
                                                   alt="thumbnail"
                                                   className={`rounded object-fit-cover me-2 tree-thumbnail cursor-pointer ${isHighlighted ? "shadow" : "shadow-sm border border-light"}`}
                                                   style={{

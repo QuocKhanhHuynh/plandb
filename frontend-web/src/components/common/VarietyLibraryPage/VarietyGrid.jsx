@@ -1,6 +1,7 @@
 import React from "react";
 import { Row, Col, Card, Badge, Button, Spinner } from "react-bootstrap";
 import { FaCheck, FaEye, FaImages } from "react-icons/fa";
+import { thumbImgProps } from "../../../utils/imageProps";
 
 const VarietyGrid = ({
   data,
@@ -62,6 +63,7 @@ const VarietyGrid = ({
                 {/* Ảnh nền chính */}
                 <Card.Img
                   src={imgUrl}
+                  {...thumbImgProps}
                   className="h-100 w-100 transition-all hover-zoom"
                   style={{ objectFit: "cover" }}
                   alt={plant.common_name || plant.variety_name}
